@@ -8,6 +8,7 @@
 ## Before getting started...
 
 &#10140; Check you have [git](https://git-scm.com/downloads) installed
+
 &#10140; [Visual Studio Code](https://code.visualstudio.com/download) is recommended
 
 ## Step 1: Create a personal github account
@@ -15,6 +16,7 @@
 **Everyone in your team needs to complete this step independently.**
 
 &#10140; Navigate to [https://github.com](https://github.com)
+
 &#10140; Click **Sign up** to register a free account
 - Refer to the [GitHub Documentation](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github) if you encounter issues
 
@@ -26,13 +28,18 @@ In Step 3 we'll give everyone in your team access to the same repository so they
 **Only one person in your team needs to do this step.**
 
 &#10140; In the upper-right corner of any page, select , then click New repository.
-&#10140; In the "Repository name" box, type a short but descriptive name for your project. 
+
+&#10140; In the "Repository name" box, type a short but descriptive name for your project.
 - Your repository name should be lowercase, with words separated by "-"
 - For example, "study-buddy-app"
+
 &#10140; In the "Description" box, type a short description. 
 - For example, type "This repository is for a Study Buddy app."
+
 &#10140; Select whether your repository will be Public or Private.
+
 &#10140; Select Add a README file.
+
 &#10140; Click Create repository.
 
 ## Step 3: Make your team members collaborators
@@ -42,6 +49,7 @@ In this step you'll add members of your team as collaborators on your project.
 **Only one person in your team needs to do this step.**
 
 &#10140; From your repository, click **Settings**
+
 &#10140; Select **Collaborators** from the menu on the left
  Select **Add People** and search for your team members by Username, Full Name, or Email
 
@@ -64,22 +72,27 @@ Later, we'll learn how to manage the workflow so that the remote repository on G
 **Everyone in your team needs to complete this step independently.**
 
 &#10140; In GitHub, from the **Code** tab of your repository, click **Code**
+
 &#10140; Copy the HTTPS URL
 
 ![Copy the URL to the remote GitHub repository](images/get-url-to-clone-repo.png)
 
 &#10140; Open Visual Studio Code
+
 &#10140; From the files **Explorer** tab, click **Clone Repository** 
 
 From Visual Studio Code there are a couple of ways you can [clone a repository](https://learn.microsoft.com/en-us/azure/developer/javascript/how-to/with-visual-studio-code/clone-github-repository?tabs=activity-bar#clone-repository). In this tutorial, we'll use the Integrated Terminal method.
 
 &#10140; Open an integrated terminal from **Terminal** -> **New Terminal**
+
 &#10140; In the terminal, navigate to the place in your file system where you'd like to clone the repository
+
 &#10140; Clone your repository with the following command:
 
         git clone https://github.com/YOUR-NAME-OR-ORGANIZATION/YOUR-REPO-NAME
 
 - In the above, you can paste the URL you copied earlier.
+
 &#10140; Navigate into the new folder:
 
         cd YOUR-REPO-NAME
@@ -97,11 +110,16 @@ In this step, you'll each practice 'staging' and 'committing' a new file to the 
 **Everyone in your team needs to complete this step independently.**
 
 &#10140; From Visual Studio Code, with your project open, go to **File** > **New File**
+
 &#10140; When prompted to enter a name for the file, call it `your-name.md` (replacing 'your-name' with your name)
 - For example, `sorrel-harriet.md`
+
 &#10140; Inside the new file, write a joke or greeting for your team members
+
 &#10140; Save your changes
+
 &#10140; Open the **Terminal** (View > Terminal)
+
 &#10140; **Stage** the new file for commit:
 
         git add your-name.md
@@ -133,6 +151,7 @@ In this step, you'll each practice 'staging' and 'committing' a new file to the 
 ## Step 6: View your version history
 
 &#10140; Visit your remote repository on GitHub.
+
 &#10140; Under **Commits**, you should be able to see a summary of the changes that have been made to your repository. It should include changes made by other team members.
 
 ![git schema](images/commit-history.png)
