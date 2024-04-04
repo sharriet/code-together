@@ -9,7 +9,7 @@
 
 &#10140; Check you have [git](https://git-scm.com/downloads) installed
 
-&#10140; [Visual Studio Code](https://code.visualstudio.com/download) is recommended
+&#10140; Install [Visual Studio Code](https://code.visualstudio.com/download) (recommended)
 
 ## Step 1: Create a personal github account
 
@@ -27,14 +27,14 @@ In Step 3 we'll give everyone in your team access to the same repository so they
 
 **Only one person in your team needs to do this step.**
 
-&#10140; In the upper-right corner of any page, select , then click New repository.
+&#10140; In the upper-right corner of any page, select &#x002B;, then click **New repository**.
 
 &#10140; In the "Repository name" box, type a short but descriptive name for your project.
 - Your repository name should be lowercase, with words separated by "-"
 - For example, "study-buddy-app"
 
 &#10140; In the "Description" box, type a short description. 
-- For example, type "This repository is for a Study Buddy app."
+- For example, type *"This repository is for a Study Buddy app."*
 
 &#10140; Select whether your repository will be Public or Private.
 
@@ -183,6 +183,11 @@ As is often the case, there are multiple ways of doing this. We will use the Int
 **NB:** The above creates a branch from the currently checked out branch. In your case, this is main. However, if you were already working on another branch, it would create a branch off that branch...so do pay attention to which branch you are currently working on! If you're ever unsure, simply do:
 
         git branch
+
+&#10140; Switch to the new branch:
+
+        git checkout your-new-branch
+
 
 ## Recommended resources and further reading
 + [Using git with Visual Studio Code](https://code.visualstudio.com/docs/sourcecontrol/overview#:~:text=VS%20Code%20will%20use%20your,currently%20have%20in%20your%20repository.)
