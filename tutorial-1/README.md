@@ -201,6 +201,7 @@ As is often the case, there are multiple ways of doing this. We will use the Int
 ## Step 9: Do some more work!
 
 &#10140; On the new branch you've created, create another markdown file. Call it `your-name-feature.md` or similar.
+
 &#10140; Add, commit and push this file to your new branch:
 
         git add your-name-feature.md
