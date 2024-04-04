@@ -168,7 +168,17 @@ Whenever we want to make some changes, we should create a new 'branch' to do our
 
 **NB:** For more information about TBD and alternative workflows, such as feature-based development, refer to the recommended resources and further reading.
 
-## Step 7: Create a new branch
+## Step 7: Update your local repository
+
+By now, hopefully your team members have pushed changes to the remote repository.
+
+To see their changes reflected in your local repository, you need to 'pull' them down.
+
+&#10140; Update your local repository:
+
+        git pull
+
+## Step 8: Create a new branch
 
 In this step you'll create a new branch to isolate your work from the trunk (main branch).
 
@@ -180,7 +190,7 @@ As is often the case, there are multiple ways of doing this. We will use the Int
 
 + You should give your branch name a unique and descriptive name that will help others understand its purpose. For the purposes of this tutorial, call it `your-name-dev` (for example, `sorrel-dev`)
 
-**NB:** The above creates a branch from the currently checked out branch. In your case, this is main. However, if you were already working on another branch, it would create a branch off that branch...so do pay attention to which branch you are currently working on! If you're ever unsure, simply do:
+**NB:** The above creates a branch from the currently checked out branch. In your case, this is main. However, if you were already working on another branch, it would create a branch off that branch...so do pay attention to which branch you are currently working on! To check which branch you're on, you can do:
 
         git branch
 
@@ -188,6 +198,18 @@ As is often the case, there are multiple ways of doing this. We will use the Int
 
         git checkout your-new-branch
 
+## Step 9: Do some more work!
+
+&#10140; On the new branch you've created, create another markdown file. Call it `your-name-feature.md` or similar.
+&#10140; Add, commit and push this file to your new branch:
+
+        git add your-name-feature.md
+        git commit -m "working on a new feature"
+        git push origin
+
+## Step 10: Merge your branch back into main
+
+        git merge main
 
 ## Recommended resources and further reading
 + [Using git with Visual Studio Code](https://code.visualstudio.com/docs/sourcecontrol/overview#:~:text=VS%20Code%20will%20use%20your,currently%20have%20in%20your%20repository.)
