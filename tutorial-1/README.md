@@ -205,16 +205,47 @@ As is often the case, there are multiple ways of doing this. We will use the Int
 
         git add your-name-feature.md
         git commit -m "working on a new feature"
-        git push origin
+        git push origin your-new-branch
+
+&#10140; From GitHub, look under the branch dropdown menu to see that your new branch has been created
 
 ## Step 10: Merge your branch back into main
 
-        git merge main
+Finally, let's assume you've now finished working on your new feature and are ready to merge it back into the trunk.
+
+&#10140; Switch to the main branch again:
+
+        git checkout main
+
+&#10140; Merge your branch into main:
+
+        git merge your-new-branch
+
+Hopefully you won't get merge conflicts! If you do, you'll have to resolve them, and then commit the merge.
+
+&#10140; Delete the working branch:
+
+        git branch -d your-new-branch
+
+&#10140; Check it was deleted locally:
+
+        git branch
+
+If you now look on GitHub, you will see the working branch is still listed there! 
+
+&#10140; To get rid of the working branch completely, do:
+
+        git push origin -d branch-name
+
+&#10140; Refresh GitHub and chech it has gone.
+
+And that concludes Tutorial 1! You now have a simple workflow to use when collaborating on your codebase. You might not want to bother with branches at all, and instead commit all your changes to main. Either way would be reasonable for this project.
 
 ## Recommended resources and further reading
 + [Using git with Visual Studio Code](https://code.visualstudio.com/docs/sourcecontrol/overview#:~:text=VS%20Code%20will%20use%20your,currently%20have%20in%20your%20repository.)
 + [Thread discussing the differences between trunk based development (TBD) and gitflow](https://softwareengineering.stackexchange.com/questions/442910/what-is-the-difference-between-trunk-based-development-and-gitflow)
 + [Using GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow)
++ Eli Schleifer (2022) [Git for trunk based development](https://medium.com/trunk-io/minimum-viable-git-for-trunk-based-development-81a5da7a77a7)
 + Trisha Gee (2023) [Why I prefer trunk based development](https://trishagee.com/2023/05/29/why-i-prefer-trunk-based-development/)
 + Jacob Schmitt (2023) [Trunk vs Feature Based Development](https://circleci.com/blog/trunk-vs-feature-based-dev/)
 
