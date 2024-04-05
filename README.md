@@ -14,7 +14,7 @@ This is a collection of short python-based tutorials aimed at introducing collab
 
 ## Contents
 
-+ Learn git basics
++ [Tutorial 1: Learn git basics](tutorial-1/README.md)
 + Practice pair programming
 + Get started writing unit tests with pytest
 + Practice Test Driven Development (TDD)
