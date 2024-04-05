@@ -38,9 +38,9 @@ In Step 3 we'll give everyone in your team access to the same repository so they
 
 &#10140; Select whether your repository will be Public or Private.
 
-&#10140; Select Add a README file.
+&#10140; Select **Add a README file**
 
-&#10140; Click Create repository.
+&#10140; Click **Create repository**
 
 ## Step 3: Make your team members collaborators
 
