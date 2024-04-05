@@ -208,7 +208,9 @@ As is often the case, there are multiple ways of doing this. We will use the Int
         git commit -m "working on a new feature"
         git push origin your-new-branch
 
-&#10140; From GitHub, look under the branch dropdown menu to see that your new branch has been created
+&#10140; From GitHub, look under the branch dropdown menu to see that your new branch has been created:
+
+![Branch dropdown menu on GitHub](images/branches.png)
 
 ## Step 10: Merge your branch back into main
 
