@@ -238,9 +238,19 @@ If you now look on GitHub, you will see the working branch is still listed there
 
         git push origin -d branch-name
 
-&#10140; Refresh GitHub and chech it has gone.
+&#10140; Refresh GitHub and check it has gone.
 
 And that concludes Tutorial 1! You now have a simple workflow to use when collaborating on your codebase. You might not want to bother with branches at all, and instead commit all your changes to main. Either way would be reasonable for this project.
+
+## One more thing...
+
+Before you can start working on your project for real, you might want to delete those markdown files we created in this tutorial...
+
+&#10140; Remove a file from the git index and push the changes to remote:
+
+        git rm your-name-feature.md
+        git commit -m "removing an old feature"
+        git push origin main
 
 ## Recommended resources and further reading
 + [Using git with Visual Studio Code](https://code.visualstudio.com/docs/sourcecontrol/overview#:~:text=VS%20Code%20will%20use%20your,currently%20have%20in%20your%20repository.)
