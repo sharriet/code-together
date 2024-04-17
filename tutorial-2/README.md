@@ -17,7 +17,7 @@ In this tutorial, you'll experience a gentle introduction to pair programming us
 
 To accommodate learners who are not co-located, we'll make use of the [Live Share](https://code.visualstudio.com/learn/collaboration/live-share) feature of [Visual Studio Code](https://code.visualstudio.com/download). For those wanting to setup a physical pair programming station, this article showcases some [different configurations](https://www.clearlyagile.com/agile-blog/2016/5/20/pair-programming-configurations).
 
-## Learning outcomes - LEARN GIT IT's COOOL
+## Learning outcomes
 
 + Gain experience with the driver-navigator approach to pair programming
 + Reflect on your experiences with pair programming, identifying opportunities for personal development
