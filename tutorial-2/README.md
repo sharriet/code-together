@@ -54,18 +54,55 @@ To start with, you'll be doing a small amount of designing / planning on a digit
 
 You should switch roles every 10 mins or so, or sooner if someone becomes stuck.
 
-Each pair in your team should work on a different user story. It may be beneficial to all work together on the first couple of steps, especially where there is overlap in your stories (i.e. they refer to the same objects).
+Each pair in your team should work on a different user story. It may be beneficial to all work together on steps 1-6 together, especially where there is overlap in your stories (i.e. they refer to the same objects).
 
-+ From your story, identify objects, properties and verbs - these will form the basis of your class design
-    - Refer back to Lecture 5 if you run into difficulty with this part.
-+ Produce a JSON file with some dummy object data (you might not need this step, depending on your story). 
+1. From your story, identify objects, properties and verbs - these will form the basis of your class design
+    - Refer back to Lecture 5 if you run into difficulty with this step
+2. Open Visual Studio Code and navigate to your working directory
+3. Start a Live Share session with your partner (and other team members if you are taking these first few steps together)
+    - Refer to the [Quick Start section of the website](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare#:~:text=Quickstart)
+4. Inside your working directory, create a folder for your application code (for example, `app/`)
+5. Inside your app directory, create a JSON file with some dummy object data 
     - JSON should be stored in a file with the `.json` extension
-    - Here are a couple of examples of objects in the JSON format:
+    - Here is an example of an array of objects in the JSON format:
 
-            {"topic_title": "Version Control", "difficulty_level": 1}
-            {"topic_title": "Continuous Delivery", "difficulty_level": 3}
-+ Practice parsing your JSON in python
-    - Refer to the [top 2 examples here](https://www.w3schools.com/python/python_json.asp)
+            [{"topic_title": "Version Control", "difficulty_level": 1},
+            {"topic_title": "Continuous Delivery", "difficulty_level": 3}]
+    - You'll need just enough dummy data to be able to meet test the functional requirements of the user story have been met. Check out my [example from Tutorial 3](../tutorial-3/app/data/topics.json)
+6. Add, commit and push your dummy data to the remote repository:
+
+        git add app/data.json
+        git commit -m "adding some dummy data for a topics object"
+        git push origin main
+
+**At this point, your team may split into pairs if you have not done so already. A driver from each pair can start a new Live Share session with their partner.**
+
+7. Practice parsing your JSON in python
+    - You can either do this from the python interactive shell, or from a temporary `.py` file
+    - You can invoke the python interactive shell from the integrated terminal with: `python3`
+
+        # import the json package
+        import json
+
+        # create a file object from your JSON file
+        f = open('data.json')
+
+        # load the data into a python object
+        data = json.load(f)
+
+    - Assuming you have created an array of objects, as I have done, you can explore its properties:
+
+        # return the length of the array
+        len(data)
+
+        # return the first object
+        data[0]
+
+        # return the 'title' property of all the objects as a list
+        for d in data:
+            print(d["title"])
+    - To close the python interactive shell: `Ctrl+D`
+    - For more operations, refer to the [examples here](https://www.geeksforgeeks.org/read-json-file-using-python/)
 + If less than 50 mins have passed, move onto [Tutorial 3](../tutorial-3/) which will get you started on your class implementation using the Test Driven Development (TDD) with the pytest framework
 + After **50 mins**, irrespective of where you get up to, return here and complete Steps 3-5
 
