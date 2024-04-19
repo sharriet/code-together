@@ -1,0 +1,25 @@
+[
+    {
+        "title": "Version Control",
+        "difficulty_level": 1
+    },
+    {
+        "title": "Continuous Delivery",
+        "difficulty_level": 3
+    },
+    {
+        "title": "Pair Programming",
+        "difficulty_level": 1
+    },
+    {
+        "title": "Agile Delivery",
+        "difficulty_level": 1
+    },
+    {
+        "title": "Test Driven Development",
+        "difficulty_level": 2},
+    {
+        "title": "Continuous Integration",
+        "difficulty_level": 3
+    }
+]
