@@ -196,9 +196,18 @@ Every code project needs a README file! This should include instructions for oth
                 pytest tests/
 + Add, commit, push your README file to the remote
 
+## Extension exercise
+
++ Reflect on your experiences with TDD...
+        - *What are the benefits of this approach?*
+        - *How can TDD support the design of good quality software?*
++ From this tutorial, what other steps did we take to help ensure the quality of the software?
+        - **Tip:** Go back over the different steps and ask yourself, *why did we do it like this?*
+
 ## Further reading
 
 + Martin Fowler (2023) [Test Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html)
 + Jacob Schmitt (2024) [Test Driven Develoment Explained](https://circleci.com/blog/test-driven-development-tdd/)
 + Kent Beck (2002) [Test Driven Development By Example](https://www.amazon.co.uk/Test-Driven-Development-Addison-Wesley-Signature/dp/0321146530)
 + [Virtual Environment Documentation](https://docs.python.org/3/library/venv.html)
++ [Pytest documentation](https://docs.pytest.org/en/7.1.x/contents.html)
