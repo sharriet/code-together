@@ -9,6 +9,15 @@ The first user story included in this implementation is:
 > for someone with my level of experience,  
 > **so I can** decide where to focus my learning.
 
+The **acceptance criteria** for this user story is:
+
+> **Given** a user has opened the application  
+> **And** the user has input their experience level  
+> **When** the user clicks on 'Learn About Modern Software Engineering',  
+> **Then** display a list of topics  
+> **And** display only topics matching the user's experience level  
+> **And** list topics alphabetically (a-z)
+
 There is currently a single class: `TopicList`, which has a single method, `get_topics()`
 
 ## Install the application
