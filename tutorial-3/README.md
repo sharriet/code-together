@@ -106,11 +106,12 @@ The basic workflow for TDD is illustrated below. We'll try to follow this as clo
         - Use `assert` statements to evaluate your test criteria
         - Here is an example:
 
-                def test_get_topics():
+                def test_get_topics_is_list():
                         tl = TopicList()
                         assert isinstance(tl.get_topics(), list)
                         assert len(tl.get_topics()) > 0
-        - In the above, I define a function, `test_get_topics()` (in pytest, all tests should be prefixed with `test_`, followed by the name of the method or function they are testing.)
+        - In the above, I define a function, `test_get_topics_is_list()` (in pytest, all tests should be prefixed with `test_`, followed by the name of the method or function they are testing.)
+        - The name of the test function should describe the thing it is testing (it essentially tests a single requirement)
         - I then create an instance of my TopicList class (which I haven't written yet)
         - I then include 2 assert statements to evaluate whether the `get_topics()` method returns a list of length > 0
 + Run the test from the integrated terminal:
@@ -144,14 +145,17 @@ The basic workflow for TDD is illustrated below. We'll try to follow this as clo
 
 ![Passing Tests](images/tests-pass.png)
 
-Clearly my code is not finished yet, because the data returned by the method is all wrong! This means I need to write better tests to verify that the data is in the correct format.
+Clearly my code is not finished yet, but I have satisfied my first requirement!
+Next I need to repeat this process, until all the acceptance criteria for the story are met.
 
 ## Step 7: Write more tests before writing more code!
 
-+ Add more test cases to your test function, or create additional test functions if you have more than one method you need to test.
-+ Run the tests - which will probably fail the first time you run them!
-+ Add just enough new code to pass the tests
-        - Take a look at my example code in the [`app/`](app/) directory!
++ Add more test cases to your test function, or create additional test functions.
+        - For example, I could add a test case to my `test_get_topics` function to check a topic is a dictionary object in the anticipated format. 
+        - **Remember:** Each new test you write should test a different requirement. For example, another test might be, `test_get_topics_by_difficulty`, which could check that the topics returned by the `get_topics` method return only topics of a certain difficulty. This might lead to a bit of code refactoring!
++ Run the tests - which will most likely fail the first time you run them!
++ Add just enough new code to pass the new tests/test cases
++ Repeat... (for a maximum of 50 mins!)
 
 ## Step 8: Commit your work
 
