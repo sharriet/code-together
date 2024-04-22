@@ -4,7 +4,10 @@ This is the beginnings of an application that seeks to educate students about mo
 
 The first user story included in this implementation is:
 
-    As a user of the 'learn software engineering' application, I want to view a list of Topics which are appropriate for someone with my level of experience, so I can decide where to focus my learning.
+    As a user of the 'learn software engineering' application,
+    I want to view a list of Topics which are appropriate 
+    for someone with my level of experience,
+    so I can decide where to focus my learning.
 
 There is currently a single class: `TopicList`, which has a single method, `get_topics()`
 
