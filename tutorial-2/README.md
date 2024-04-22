@@ -1,6 +1,6 @@
 # Tutorial 2: Practice pair programming
 
-    Pair programming essentially means that two people write code together on one machine. It is a very collaborative way of working and involves a lot of communication. While a pair of developers work on a task together, they do not only write code, they also plan and discuss their work. They clarify ideas on the way, discuss approaches and come to better solutions. (Böckeler and Siessegger)
+> Pair programming essentially means that two people write code together on one machine. It is a very collaborative way of working and involves a lot of communication. While a pair of developers work on a task together, they do not only write code, they also plan and discuss their work. They clarify ideas on the way, discuss approaches and come to better solutions. (Böckeler and Siessegger)
 
 Benefits of pair programming include:
 
@@ -17,9 +17,12 @@ In this tutorial, you'll experience a gentle introduction to pair programming us
 
 To accommodate learners who are not co-located, we'll make use of the [Live Share](https://code.visualstudio.com/learn/collaboration/live-share) feature of [Visual Studio Code](https://code.visualstudio.com/download). For those wanting to setup a physical pair programming station, this article showcases some [different configurations](https://www.clearlyagile.com/agile-blog/2016/5/20/pair-programming-configurations).
 
+The task you'll pair on involves producing and parsing some dummy application data in the JSON format. It is a technically simple task, but it involves discussion, since there are design decisions to be made in the process.
+
 ## Learning outcomes
 
 + Gain experience with the driver-navigator approach to pair programming
++ Practice parsing a JSON file in python
 + Reflect on your experiences with pair programming, identifying opportunities for personal development
 
 ## Pre-requisites
@@ -34,52 +37,51 @@ To accommodate learners who are not co-located, we'll make use of the [Live Shar
 
 ## Step 1: Get ready
 
-+ Decide on a setup you'll use for this pairing session
-    - If you are physically co-located, you may sit side by side and use Live Share
-    - If you are not co-located, use Live Share remotely
+&#10140; Decide on a setup you'll use for this pairing session
+- If you are physically co-located, you may sit side by side and use Live Share
+- If you are not co-located, use Live Share remotely
 
-+ Make sure you have both completed [Tutorial 1](../tutorial-1/README.md) and have executed `git pull` to ensure your local git repository is in sync with the remote
+&#10140; Make sure you have both completed [Tutorial 1](../tutorial-1/README.md) and have executed `git pull` to ensure your local git repository is in sync with the remote
 
-+ Decide who will drive and who will navigate first
-    - Whoever is driving will do the Live Sharing first
-    - The navigator will direct and/or ask questions to encourage the driver to verbalise their thinking
-    - The navigator should open this tutorial and any other documentation you need on their computer, so they can refer to it while directing the driver 
+&#10140; Decide who will drive and who will navigate first
+- Whoever is driving will do the Live Sharing first
+- The navigator will direct and/or ask questions to encourage the driver to verbalise their thinking
+- The navigator should open this tutorial and any other documentation you need on their computer, so they can refer to it while directing the driver 
 
-+ Take a look at these [best practices for pairing](https://dev.to/documatic/pair-programming-best-practices-and-tools-154j#best-practices-for-pair-programming) before you start, and discuss your thoughts
+&#10140; Take a look at these [best practices for pairing](https://dev.to/documatic/pair-programming-best-practices-and-tools-154j#best-practices-for-pair-programming) before you start, and discuss your thoughts
 
 ## Step 2: Pair
 
-In this pairing activity you'll work together to start implementing a user story from your product backlog.
-To start with, you'll be doing a small amount of designing / planning on a digital whiteboard or pen and paper. You should aim to do the minimum amount of planning that will enable you to get started with the code implementation.
++ In this pairing activity you'll work together to start implementing a user story from your product backlog.
++ To start with, you'll be doing a small amount of designing / planning on a digital whiteboard or pen and paper. You should aim to do the minimum amount of planning that will enable you to get started with the code implementation.
++ The tutorial suggests you begin your code implementation by creating some dummy application data in the form of a JSON file (just enough to be able to implement your first user story.) If your user story doesn't require any object data, you could pair on [Tutorial 3](../tutorial-3/).
++ You should switch roles every 10 mins or so, or sooner if someone becomes stuck.
++ Each pair in your team should work on a different user story. It may be beneficial to all work together on steps 1-6 together, especially where there is overlap in your stories (i.e. they refer to the same objects).
 
-You should switch roles every 10 mins or so, or sooner if someone becomes stuck.
-
-Each pair in your team should work on a different user story. It may be beneficial to all work together on steps 1-6 together, especially where there is overlap in your stories (i.e. they refer to the same objects).
-
-1. From your story, identify objects, properties and verbs - these will form the basis of your class design
-    - Refer back to Lecture 5 if you run into difficulty with this step
-2. Open Visual Studio Code and navigate to your working directory
-3. Start a Live Share session with your partner (and other team members if you are taking these first few steps together)
-    - Refer to the [Quick Start section of the website](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare#:~:text=Quickstart)
-4. Inside your working directory, create a folder for your application code (for example, `app/`)
-5. Inside your app directory, create a JSON file with some dummy object data 
-    - JSON should be stored in a file with the `.json` extension
-    - Here is an example of an array of objects in the JSON format:
+&#10140; From your story, identify objects, properties and verbs - these will form the basis of your class design
+- Refer back to Lecture 5 if you run into difficulty with this step
+&#10140; Open Visual Studio Code and navigate to your working directory
+&#10140; Start a Live Share session with your partner (and other team members if you are taking these first few steps together)
+- Refer to the [Quick Start section of the website](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare#:~:text=Quickstart)
+&#10140; Inside your working directory, create a folder for your application code (for example, `app/`)
+&#10140; Inside your app directory, create a JSON file with some dummy object data 
+- JSON should be stored in a file with the `.json` extension
+- Here is an example of an array of objects in the JSON format:
 
             [{"topic_title": "Version Control", "difficulty_level": 1},
             {"topic_title": "Continuous Delivery", "difficulty_level": 3}]
-    - You'll need just enough dummy data to be able to meet test the functional requirements of the user story have been met. Check out my [example from Tutorial 3](../tutorial-3/app/data/topics.json)
-6. Add, commit and push your dummy data to the remote repository:
+- You'll need just enough dummy data to be able to test the functional requirements of the user story have been met. Check out my [example from Tutorial 3](../tutorial-3/app/data/topics.json)
+&#10140; Add, commit and push your dummy data to the remote repository:
 
         git add app/data.json
         git commit -m "adding some dummy data for a topics object"
         git push origin main
 
-**At this point, your team may split into pairs if you have not done so already. A driver from each pair can start a new Live Share session with their partner.**
+**At this point, your team should split into pairs if you have not done so already. A driver from each pair can start a new Live Share session with their partner.**
 
-7. Practice parsing your JSON in python
-    - You can either do this from the python interactive shell, or from a temporary `.py` file
-    - You can invoke the python interactive shell from the integrated terminal with: `python3`
+&#10140; Practice parsing your JSON in python
+- You can either do this from the python interactive shell, or from a temporary `.py` file
+- You can invoke the python interactive shell from the integrated terminal with: `python3`
 
         # import the json package
         import json
@@ -90,7 +92,7 @@ Each pair in your team should work on a different user story. It may be benefici
         # load the data into a python object
         data = json.load(f)
 
-    - Assuming you have created an array of objects, as I have done, you can explore its properties:
+- Assuming you have created an array of objects, as I have done, you can explore its properties:
 
         # return the length of the array
         len(data)
@@ -101,10 +103,12 @@ Each pair in your team should work on a different user story. It may be benefici
         # return the 'title' property of all the objects as a list
         for d in data:
             print(d["title"])
-    - To close the python interactive shell: `Ctrl+D`
-    - For more operations, refer to the [examples here](https://www.geeksforgeeks.org/read-json-file-using-python/)
-+ If less than 50 mins have passed, move onto [Tutorial 3](../tutorial-3/) which will get you started on your class implementation using the Test Driven Development (TDD) with the pytest framework
-+ After **50 mins**, irrespective of where you get up to, return here and complete Steps 3-5
+- To close the python interactive shell: `Ctrl+D`
+- For more operations, refer to the [examples here](https://www.geeksforgeeks.org/read-json-file-using-python/)
+
+&#10140; **If** less than 50 mins have passed, move onto [Tutorial 3](../tutorial-3/) which will get you started on your class implementation using Test Driven Development (TDD) with the pytest framework.
+
+&#10140; **After 50 mins**, irrespective of where you have got up to, procede to Step 3.
 
 ## Step 3: Sync your work
 
@@ -113,7 +117,7 @@ Each pair in your team should work on a different user story. It may be benefici
 
 ## Step 3: Reflect
 
-+ Reflect together on how this pairing session went
+&#10140; Reflect together on how this pairing session went
     - *What did you learn?*
     - *What felt difficult or challenging?*
     - *How could it have gone better?*
@@ -121,11 +125,11 @@ Each pair in your team should work on a different user story. It may be benefici
 
 ## Step 4: Plan
 
-+ Independently, think about what you might do differently another time, to make pairing and collaborating more effective
-+ Record your personal reflections for your individual reflective report
-+ Plan our next pairing session!
-    - If you still have work to do on this user story, you might want to pair with the same person, or you could rotate pairs
-    - You should rotate pairs at least once on this coursework so you have had the opportunitity to experience pairing with different people
+&#10140; Independently, think about what you might do differently another time, to make pairing and collaborating more effective
+&#10140; Record your personal reflections for your individual reflective report
+&#10140; Plan your next pairing session!
+- Rotating pairs is recommended to maximise knowledge transfer
+- You should rotate pairs at least once on this coursework so you have had the opportunitity to experience pairing with different people
 
 ## Recommended reading
 
