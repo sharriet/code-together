@@ -1,12 +1,13 @@
 from models.topiclist import TopicList
 
-# test the get_topics method of the TopicList class
+# test the TopicList class
 
-def test_get_topics():
+def test_get_topics_is_list():
     tl = TopicList()
-    # should return a list
+    # get_topics should return a list
     assert isinstance(tl.get_topics(), list)
-    # number of topics should be > 0
-    assert len(tl.get_topics()) > 0
-    # topics should have a title attribute
-    assert tl.get_topics()[0]["title"]
+
+def test_get_topics_has_title():
+    tl = TopicList()
+    # a topic should have a title
+    assert [i["title"] for i in tl.get_topics()]
