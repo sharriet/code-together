@@ -1,5 +1,5 @@
 # Code together!
-This is a collection python-based tutorials aimed at introducing collaborative development practices.
+This is a collection of python-based tutorials aimed at introducing collaborative development practices.
 + The tutorials are aimed at students and beginner software engineers.
 + They are designed to be completed in sequence.
 + You will find them easier to follow if you use Visual Studio Code, either on a Mac or on Windows with [Windows Subsystem for Linux (WSL2)](https://learn.microsoft.com/en-us/windows/wsl/install).
