@@ -1,61 +1,68 @@
 # Tutorial 3: TDD with python and pytest
 
+## Overview
+
 This tutorial will aim to walk you through the first stages of developing a python application using a Test Driven Development (TDD) approach. You should be pairing with another member of your team for this tutorial.
 
-Since your application will have different requirements to the one used in the examples, you will need to think hard for Steps 5-7, and communicate frequently with your pairing partner and team.
+Since your application will have different requirements to the one used in the examples, you will need to think carefully, and communicate frequently with your pairing partner and team.
+
+## Learning outcomes
+
++ Gain experience with the TDD approach to software development
++ Reflect on the benefits and challenges with this approach
 
 ## Important things to note before getting started...
 
-It is recommended that your team uses python to develop its software project. This will make it easier to adopt the collaborative development practices documented in these tutorials. If you do use another language, you will need to look for an equivalent test framework. Failure to implement tests (an important mark of software quality) will affect your mark.
-
-You should also develop the habit of using [virtual environments](https://docs.python.org/3/tutorial/venv.html) for developing python applications. These are isolated python environments that can be consistently replicated across different machines. We don't want a situation where one team member is using a different version of python, or a different version of a python package from other members of the team! 
++ It is recommended that your team uses python to develop its software project. This will make it easier to adopt the collaborative development practices documented in these tutorials. If you do use another language, you will need to look for an equivalent test framework. Failure to implement tests (an important mark of software quality) will affect your mark.
++ You should develop the habit of using [virtual environments](https://docs.python.org/3/tutorial/venv.html) when building python applications. These are isolated python environments that can be consistently replicated across different machines. We don't want a situation where one team member is using a different version of python, or a different version of a python package from other team members! We also need it to be easy for those reviewing your code to run your application. 
 
 ## Pre-requisites
 
 ### Complete tutorials 1 and 2
-You'll need to complete tutorials [1](../tutorial-1/) and [2](../tutorial-2/) before attempting this tutorial. The pre-requisites for Tutorial 2 apply here too (such as having a well defined user story to work on.)
++ You'll need to complete tutorials [1](../tutorial-1/) and [2](../tutorial-2/) before attempting this tutorial.
++ The pre-requisites for Tutorial 2 apply here too (such as having a well defined user story to work on.)
 
 ### Install Visual Studio Code with WSL
-This tutorial assumes you will use **Visual Studio code with the WSL extension** to develop and execute your python code. WSL refers to the Windows Subsystem for Linux, which allows you to run a Linux environment on your Windows machine. Many python developers prefer to develop on Linux as some packages will not work properly on Windows, and code may execute faster on Linux-based operating systems.
++ This tutorial assumes you will use **Visual Studio code with the WSL extension** to develop and execute your python code. 
++ WSL refers to the Windows Subsystem for Linux, which allows you to run a Linux environment on your Windows machine.
++ Many python developers prefer to develop on Linux as some packages will not work properly on Windows, and code may execute faster on Linux-based operating systems.
++ The commands in this tutorial will be slightly different if you're using Windows without WSL. Where applicable, I have tried to link you to some resources that may help.
 
-+ [Follow these instructions to install WSL2](https://learn.microsoft.com/en-gb/windows/wsl/install)
-+ Next [follow these instructions to install VS code with the WSL extension](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode).
+&#10140; [Follow these instructions to install WSL2](https://learn.microsoft.com/en-gb/windows/wsl/install)
 
-The commands in this tutorial will be slightly different if you're using Windows without WSL. Where applicable, I have tried to link you to some resources that may help.
+&#10140; [Follow these instructions to install VS code with the WSL extension](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode).
 
 ### Install Python 3.12
-The tutorial assumes you'll use the latest stable version of python which is currently 3.12.
++ The tutorial assumes you'll use the latest stable version of python which is currently 3.12.
 
-From the integrated terminal, check you have python 3.12 installed:
+&#10140; From the integrated terminal, check you have python 3.12 installed:
 
         python --version
 
-If you haven't got it, you should install it. 
++ If you haven't got it, you should install it. 
 
 ### Install the `venv` package
-If you're on a Mac, Linux or WSL, you may need to install the [`venv`](https://docs.python.org/3/library/venv.html) package for python:
-
-On Windows, it should already be installed.
++ If you're on a Mac, Linux or WSL, you may need to install the [`venv`](https://docs.python.org/3/library/venv.html) package for python.
++ On Windows, it should already be installed.
 
 **Once you have done all of the above, you're ready to start!**
 
 ## Step 1: Create a virtual environment for your python project
 
-+ From the integrated terminal:
+&#10140; From the integrated terminal, initiate a virtual environment:
 
         python3.12 -m venv ./appname
 
-In the above, replace 'appname' with the name of your application.
++ In the above, replace 'appname' with the name of your application.
 
 ## Step 2: Activate the virtual environment
 
-+ From the terminal:
+&#10140; From the integrated terminal, activate the virutal environment:
 
         source /appname/bin/activate
 
-At this point you should see the command line prompt changes, indicating you are now in the virtual environment.
-
-+ To deactivate, you can simply do:
++ At this point you should see the command line prompt changes, indicating you are now in the virtual environment.
++ To deactivate it, you can simply do:
 
         deactivate
 
@@ -65,17 +72,17 @@ We'll use the [pytest framework](https://docs.pytest.org/en/8.0.x/) to write uni
 
 **Make sure your virtual environment is activated before completing this step.**
 
-+ Install the pytest package with pip, which is a package manager for python:
+&#10140; Install the pytest package with pip, which is a package manager for python:
 
         pip install python
 
-**Note:** this installs the package in the virtual environment only - not on your system-wide python install, which is really handy as it means we can have many python projects using different versions of the same packages, and it also avoids package conflicts.
+**Note:** this installs the package in the virtual environment only - not on your system-wide python installation, which is really handy as it means we can have many python projects using different versions of python or its packages while avoiding package conflicts.
 
 ## Step 4: Create a structure for your application
 
-**You are advised to consult your team here if you plan to deviate from my example.**
+**You are advised to consult your team here, or work together on it, so as to avoid conflicts when you commit your code to github.**
 
-+ Create a skeleton structure for your application as follows:
+&#10140; Create a skeleton structure for your application as follows:
 
                 app/
                         models/
