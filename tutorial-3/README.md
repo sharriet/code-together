@@ -223,8 +223,8 @@ Every code project needs a README file! This should include instructions for oth
 ## Extension exercise
 
 &#10140; Reflect on your experiences with TDD...
-        - *What are the benefits of this approach?*
-        - *How can TDD support the design of good quality software?*
+- *What are the benefits of this approach?*
+- *How can TDD support the design of good quality software?*
 
 &#10140; Consider, *what other steps did we take to help ensure the quality of the software?*
 - **Tip:** Go back over the different steps and ask yourself, *why did we do it like this?*
