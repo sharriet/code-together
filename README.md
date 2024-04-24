@@ -1,8 +1,8 @@
 # Code together!
-This is a collection of short python-based tutorials aimed at introducing collaborative development practices.
+This is a collection python-based tutorials aimed at introducing collaborative development practices.
 + The tutorials are aimed at students and beginner software engineers.
 + They are designed to be completed in sequence.
-+ You may find them easier to follow if you use Visual Studio Code, either on a Mac or on Windows with [Windows Subsystem for Linux (WSL2)](https://learn.microsoft.com/en-us/windows/wsl/install).
++ You will find them easier to follow if you use Visual Studio Code, either on a Mac or on Windows with [Windows Subsystem for Linux (WSL2)](https://learn.microsoft.com/en-us/windows/wsl/install).
 + The practices covered by the tutorials aim to encourage novice developers to **build quality in** to the development process
 
 ## Pre-requisites
@@ -15,9 +15,7 @@ This is a collection of short python-based tutorials aimed at introducing collab
 ## Contents
 
 + [Tutorial 1: Learn git basics](tutorial-1/README.md)
-+ Practice pair programming
-+ Get started writing unit tests with pytest
-+ Practice Test Driven Development (TDD)
-+ Document your code
++ [Tutorial 2: Practice pair programming](tutorial-2/README.md)
++ [Tutorial 3: Practice Test Driven Development (TDD) with pytest](tutorial-3/README.md)
 + Practice code review
 + Build a simple CI/CD pipeline with github actions
