@@ -62,7 +62,7 @@ The task you'll pair on involves producing and parsing some dummy application da
 + To start with, you'll be doing a small amount of designing / planning on a digital whiteboard or pen and paper. You should aim to do the minimum amount of planning that will enable you to get started with the code implementation (the design will evolve incrementally as you add functionality and refactor.)
 + The tutorial suggests you begin your code implementation by creating some dummy application data in the form of a JSON file (just enough to be able to implement your first user story.) If your user story doesn't require any object data, you could nip straight to [Tutorial 3](../tutorial-3/). However, if you are not too confident in python, creating and parsing a simple JSON file is a good place to start.
 + You should switch roles every 10 mins or so, or sooner if someone becomes stuck.
-+ Each pair in your team should work on a different user story. It may be beneficial to all work together on steps 1-6 together, especially where there is overlap in your stories (i.e. they refer to the same objects).
++ Each pair in your team will work on a different user story. However, it may be beneficial to all work together for the first part of this tutorial, especially where there is overlap in your stories (i.e. they refer to the same objects).
 
 &#10140; From your user story, identify the objects, properties and verbs - these will form the basis of your class design
 - Refer back to Lecture 5 if you run into difficulty with this step
@@ -72,10 +72,14 @@ The task you'll pair on involves producing and parsing some dummy application da
 > for someone with my level of experience,  
 > **so I can** decide where to focus my learning.
 - In the above, I've identified **User**, **Topic** and **TopicList** as objects (classes). **experience_level** will be a property of both a User and a Topic.
+
 &#10140; Open Visual Studio Code and navigate to your working directory
+
 &#10140; Start a Live Share session with your partner (and other team members if you are taking these first few steps together)
 - Refer to the [Quick Start section of the website](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare#:~:text=Quickstart)
+
 &#10140; Inside your working directory, create a folder for your application code (for example, `app/`)
+
 &#10140; Inside your app directory, create a JSON file with some dummy object data 
 - JSON should be stored in a file with the `.json` extension
 - Here is an example of an array of objects in the JSON format:
@@ -83,6 +87,7 @@ The task you'll pair on involves producing and parsing some dummy application da
             [{"topic_title": "Version Control", "difficulty_level": 1},
             {"topic_title": "Continuous Delivery", "difficulty_level": 3}]
 - You'll need just enough dummy data to be able to test the functional requirements of the user story have been met. Check out my [example from Tutorial 3](../tutorial-3/app/data/topics.json)
+
 &#10140; Add, commit and push your dummy data to the remote repository:
 
         git add app/data.json
@@ -124,8 +129,9 @@ The task you'll pair on involves producing and parsing some dummy application da
 
 ## Step 3: Sync your work
 
-+ Make sure the files you've worked on have been **added** to your local git repository, and that the changes you've made have been **committed** and **pushed** to the remote repository (see [Tutorial 1](../tutorial-1/README.md))
-+ Make sure each person has **pulled** the changes, so your local repositories are both in sync
+&#10140; Make sure the files you've worked on have been **added** to your local git repository, and that the changes you've made have been **committed** and **pushed** to the remote repository (see [Tutorial 1](../tutorial-1/README.md))
+
+&#10140; Make sure each person has **pulled** the changes, so your local repositories are both in sync
 
 ## Step 3: Reflect
 
@@ -133,12 +139,15 @@ The task you'll pair on involves producing and parsing some dummy application da
     - *What did you learn?*
     - *What felt difficult or challenging?*
     - *How could it have gone better?*
-+ Document the work you did today for your group report (a short summary is fine)
+
+&#10140; Document the work you did today for your group report (a short summary is fine)
 
 ## Step 4: Plan
 
 &#10140; Independently, think about what you might do differently another time, to make pairing and collaborating more effective
+
 &#10140; Record your personal reflections for your individual reflective report
+
 &#10140; Plan your next pairing session!
 - Rotating pairs is recommended to maximise knowledge transfer
 - You should rotate pairs at least once on this coursework so you have had the opportunitity to experience pairing with different people
