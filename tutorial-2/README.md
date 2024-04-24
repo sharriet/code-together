@@ -1,6 +1,10 @@
 # Tutorial 2: Practice pair programming
 
+## What is pair programming?
+
 > Pair programming essentially means that two people write code together on one machine. It is a very collaborative way of working and involves a lot of communication. While a pair of developers work on a task together, they do not only write code, they also plan and discuss their work. They clarify ideas on the way, discuss approaches and come to better solutions. (Böckeler and Siessegger)
+
+&#10140; Watch from [18:19-23:47 in this Presentation by Paige Watson](https://www.linkedin.com/events/7170722062938849280/comments/)
 
 Benefits of pair programming include:
 
@@ -11,9 +15,11 @@ Benefits of pair programming include:
 + Developers learn communication skills
 + Developers build better relationships
 
-However, pair programming requires mental and social effort. It is a skill that takes time to master. Moreover, there are different techniques 
+However, pair programming requires mental and social effort. It is a skill that takes time to master. Moreover, there are different pairing techiques you can use.
 
-In this tutorial, you'll experience a gentle introduction to pair programming using the driver navigator technique. For other techniques, refer to the further reading section at the end of the tutorial.
+## Tutorial overview
+
+In this tutorial, you'll experience a gentle introduction to pair programming using the **driver-navigator**  technique.
 
 To accommodate learners who are not co-located, we'll make use of the [Live Share](https://code.visualstudio.com/learn/collaboration/live-share) feature of [Visual Studio Code](https://code.visualstudio.com/download). For those wanting to setup a physical pair programming station, this article showcases some [different configurations](https://www.clearlyagile.com/agile-blog/2016/5/20/pair-programming-configurations).
 
@@ -50,16 +56,22 @@ The task you'll pair on involves producing and parsing some dummy application da
 
 &#10140; Take a look at these [best practices for pairing](https://dev.to/documatic/pair-programming-best-practices-and-tools-154j#best-practices-for-pair-programming) before you start, and discuss your thoughts
 
-## Step 2: Pair
+## Step 2: Pair!
 
-+ In this pairing activity you'll work together to start implementing a user story from your product backlog.
-+ To start with, you'll be doing a small amount of designing / planning on a digital whiteboard or pen and paper. You should aim to do the minimum amount of planning that will enable you to get started with the code implementation.
-+ The tutorial suggests you begin your code implementation by creating some dummy application data in the form of a JSON file (just enough to be able to implement your first user story.) If your user story doesn't require any object data, you could pair on [Tutorial 3](../tutorial-3/).
++ The goal of this pairing activity will be to work together to start implementing a user story from your product backlog.
++ To start with, you'll be doing a small amount of designing / planning on a digital whiteboard or pen and paper. You should aim to do the minimum amount of planning that will enable you to get started with the code implementation (the design will evolve incrementally as you add functionality and refactor.)
++ The tutorial suggests you begin your code implementation by creating some dummy application data in the form of a JSON file (just enough to be able to implement your first user story.) If your user story doesn't require any object data, you could nip straight to [Tutorial 3](../tutorial-3/). However, if you are not too confident in python, creating and parsing a simple JSON file is a good place to start.
 + You should switch roles every 10 mins or so, or sooner if someone becomes stuck.
 + Each pair in your team should work on a different user story. It may be beneficial to all work together on steps 1-6 together, especially where there is overlap in your stories (i.e. they refer to the same objects).
 
-&#10140; From your story, identify objects, properties and verbs - these will form the basis of your class design
+&#10140; From your user story, identify the objects, properties and verbs - these will form the basis of your class design
 - Refer back to Lecture 5 if you run into difficulty with this step
+- Here is an example of a user story:
+> **As a** user of the 'learn software engineering' application,  
+> **I want** to view a list of Topics which are appropriate  
+> for someone with my level of experience,  
+> **so I can** decide where to focus my learning.
+- In the above, I've identified **User**, **Topic** and **TopicList** as objects (classes). **experience_level** will be a property of both a User and a Topic.
 &#10140; Open Visual Studio Code and navigate to your working directory
 &#10140; Start a Live Share session with your partner (and other team members if you are taking these first few steps together)
 - Refer to the [Quick Start section of the website](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare#:~:text=Quickstart)
