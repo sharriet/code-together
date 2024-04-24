@@ -89,9 +89,8 @@ We'll use the [pytest framework](https://docs.pytest.org/en/8.0.x/) to write uni
                                 __init__.py
                         tests/
                                 __init__.py
-The `__init__.py` files are needed for the models and tests directories to be recognised as packages.
-
-**Tip:** From the terminal with WSL, you can easily create new files with the `touch` command:
++ The `__init__.py` files are needed for the models and tests directories to be recognised as packages.
++ **Tip:** From the terminal with WSL, you can easily create new files with the `touch` command:
 
                 touch app/models/__init__.py
 
@@ -101,91 +100,104 @@ The basic workflow for TDD is illustrated below. We'll try to follow this as clo
 
 ![TDD Workflow](images/TDD-workflow.png)
 
-+ Inside `tests/`, create a file, `test_mymodel.py`
-        - In the above, replace 'mymodel' with the name of the class you are planning to implement. For example, I am about to implement a TopicList class, hence I will call my python file, `test_topiclist.py`.
-+ Open the test file you just created
-+ Identify a method of the class you intend to write, which is needed for your story to meet its acceptance criteria
-        - For example, TopicList needs a `get_topics()` method, which will return the topics data
-+ Identify one or more criteria that will allow us to know if this method is behaving correctly
-        - For example, `get_topics()` should return a list, and its length should be greater than 0
-        - We may need to add to this list of pass criteria later, so keep it simple for now!
-+ Write a single test for your method
-        - Use `assert` statements to evaluate your test criteria
-        - Here is an example:
+&#10140; Inside `tests/`, create a file, `test_mymodel.py`
+- In the above, replace 'mymodel' with the name of the class you are planning to implement. For example, I am about to implement a TopicList class, hence I will call my python file, `test_topiclist.py`.
+
+&#10140; Open the test file you just created
+
+&#10140; Identify a method of the class you intend to write, which is needed for your story to meet its acceptance criteria
+- For example, TopicList needs a `get_topics()` method, which will return the topics data
+- Your method should have a name that describes what it does, and it should use the python naming convention for functions and methods (lowercase, words separated by underscores)
+
+&#10140; Identify one or more criteria that will allow us to know if this method is behaving correctly
+- For example, `get_topics()` should return a list, and its length should be greater than 0
+- We may need to add to this list of pass criteria later, so keep it simple for now!
+
+&#10140; Write a single test for your method
+- Use `assert` statements to evaluate your test criteria
+- Here is an example:
 
                 def test_get_topics_is_list():
                         tl = TopicList()
                         assert isinstance(tl.get_topics(), list)
-                        assert len(tl.get_topics()) > 0
-        - In the above, I define a function, `test_get_topics_is_list()` (in pytest, all tests should be prefixed with `test_`, followed by the name of the method or function they are testing.)
-        - The name of the test function should describe the thing it is testing (it essentially tests a single requirement)
-        - I then create an instance of my TopicList class (which I haven't written yet)
-        - I then include 2 assert statements to evaluate whether the `get_topics()` method returns a list of length > 0
-+ Run the test from the integrated terminal:
+- In the above, I define a function, `test_get_topics_is_list()` (in pytest, all tests should be prefixed with `test_`, followed by the name of the method or function they are testing.)
+- The name of the test function should describe the thing it is testing (it essentially tests a single requirement)
+- I then create an instance of my `TopicList` class (which I haven't written yet!)
+- I then include a single assert statement to evaluate whether the `get_topics()` method returns a list
+
+&#10140; Run the test from the integrated terminal:
 
                 pytest tests/
-        - Of course it will FAIL with a NameError because we haven't written the class yet!
-+ Create a file called `mymodel.py` in your models directory (replacing mymodel with the name of the class)
-        - For example, I have created a `topiclist.py` file
-+ In the new file, define the class, but without any code in it. For example,
+- Of course it will FAIL with a NameError because we haven't written the class yet!
+
+&#10140; Create a file called `mymodel.py` in your models directory (replacing mymodel with the name of the class)
+- For example, I have created a `topiclist.py` file
+
+&#10140; In the new file, define the class, but without any code in it. For example,
 
                 class TopicList:
                         pass
-+ Import the class into the top of your test script. For example,
+&#10140; Import the class into the top of your test script. For example,
 
                 from models.topiclist import TopicList
 
-+ Run pytest again
-        - This time you should receive an AttributeError, because we haven't defined the method we're trying to test yet.
+&#10140; Run pytest again
+- This time you should receive an AttributeError, because we haven't defined the method we're trying to test yet.
 
-## Step 6: Write the minimum code to pass the tests
+## Step 6: Write the minimum code to pass the test
 
-+ Next implement the minimum amount of code in your class definition to make the tests pass.
-        - Here's my example:
+&#10140; Implement the minimum amount of code in your class definition to make the test pass.
+- Here's my example:
 
                 class TopicList:
     
                         # Instance method
                         def get_topics(self):
                                 return [1,2,3,4]
-+ Re-run your test. Eventually you should see some satisfying green passes:
+
+&#10140; Re-run your test. Eventually you should see a satisfying green pass!
 
 ![Passing Tests](images/tests-pass.png)
 
 Clearly my code is not finished yet, but I have satisfied my first requirement!
-Next I need to repeat this process, until all the acceptance criteria for the story are met.
+Next I need to repeat this process, until all the acceptance criteria for the story have been met.
 
 ## Step 7: Write more tests before writing more code!
 
-+ Add more test cases to your test function, or create additional test functions.
-        - For example, I could add a test case to my `test_get_topics` function to check a topic is a dictionary object in the anticipated format. 
-        - **Remember:** Each new test you write should test a different requirement. For example, another test might be, `test_get_topics_by_difficulty`, which could check that the topics returned by the `get_topics` method return only topics of a certain difficulty. This might lead to a bit of code refactoring!
-+ Run the tests - which will most likely fail the first time you run them!
-+ Add just enough new code to pass the new tests/test cases
-+ Repeat... (for a maximum of 50 mins!)
+&#10140; Write another test to test another critera.
+- **Remember:** Each new test you write should test a different requirement.
+- For example, in my case, another test might be, `test_get_topics_by_difficulty`. This would check that the topics returned by the `get_topics` method returned only topics of a certain difficulty. This might lead to a bit of code refactoring!
+
+&#10140; Run the new test - which will most likely fail the first time you run them!
+
+&#10140; Add just enough new code to pass the new test
+
+&#10140; Repeat... (for a maximum of 30-50 mins!)
+- It's important to take regular breaks when pairing
 
 ## Step 8: Commit your work
 
-At this stage you need to add, commit, push your work to the remote repository as before.
-
-+ **Don't** add and commit any files related to your python virtual environment!
-+ **Only** add the files in your `data`, `models` and `tests` directories
+&#10140; At this stage you should add, commit, push your work to the remote repository on GitHub
++ **Don't** add or commit any files related to your python virtual environment!
++ **Only** add the files in your `data`, `models` and `tests` directories!
 
 ## Step 9: Create a requirements file
 
 In order for others to be able to recreate your virtual environment, we need to make a `requirements.txt` file which will be stored along with our source code. We can do this with `pip freeze`.
 
-+ Generate a `requirements.txt` file:
+&#10140; Generate a `requirements.txt` file:
 
                 pip freeze > requirements.txt
-+ Add, commit and push the requirements file to the remote repository on git
+
+&#10140; Add, commit and push the requirements file to the remote repository on GitHub
 
 ## Step 10: Create a README file for your application
 
 Every code project needs a README file! This should include instructions for others on how to run and use your application. To start with, we'll keep ours very lightweight, with a simple set of instructions for recreating the virtual environment and running the tests.
 
-+ Create a `README.md` file in the base of your local repository
-+ Add some text to your README file, which should include something like the following:
+&#10140; Create a `README.md` file in the base of your local repository
+
+&#10140; Add some text to your README file, which should include something like the following:
 
         From a terminal, clone this repository:
 
@@ -205,15 +217,19 @@ Every code project needs a README file! This should include instructions for oth
         Run the tests:
 
                 pytest tests/
-+ Add, commit, push your README file to the remote
+
+&#10140; Add, commit, push your README file to the remote repository on GitHub.
 
 ## Extension exercise
 
-+ Reflect on your experiences with TDD...
+&#10140; Reflect on your experiences with TDD...
         - *What are the benefits of this approach?*
         - *How can TDD support the design of good quality software?*
-+ From this tutorial, what other steps did we take to help ensure the quality of the software?
-        - **Tip:** Go back over the different steps and ask yourself, *why did we do it like this?*
+
+&#10140; Consider, *what other steps did we take to help ensure the quality of the software?*
+- **Tip:** Go back over the different steps and ask yourself, *why did we do it like this?*
+
+&#10140; Document the actions and insights you have taken today for your group and individual reports.
 
 ## Further reading
 
@@ -222,3 +238,4 @@ Every code project needs a README file! This should include instructions for oth
 + Kent Beck (2002) [Test Driven Development By Example](https://www.amazon.co.uk/Test-Driven-Development-Addison-Wesley-Signature/dp/0321146530)
 + [Virtual Environment Documentation](https://docs.python.org/3/library/venv.html)
 + [Pytest documentation](https://docs.pytest.org/en/7.1.x/contents.html)
++ Reitz & Schluzzer (online) [Hitchhiker's Guide to Python: Structuring the repository](https://docs.python-guide.org/writing/structure/#structure-of-the-repository)
